@@ -1,0 +1,14 @@
+
+# Install the dependencies 
+$ pip install -U PyQt5
+
+# Set 'QT_API' environment var to be 'pyqt5' 
+# Either (1) globally/permanently, (2) temporaly (for the specific run), or (3) programatically in Python
+# (1)/ (2) Set env variable in Windows
+# $ set QT_API = pyqt5  (or 'setx QT_API pyqt5 /m' for permanently for Windows 2008/7 and other)
+# (3) programatically in Python
+# import os
+# os.environ.setdefault('QT_API', 'pyqt5')
+
+# Install formlayout
+$ pip install -U formlayout
