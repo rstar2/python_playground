@@ -1,7 +1,6 @@
 import pprint
 
-t = [[[['black', 'cyan'], 'white', ['green', 'red']], [['magenta',
-    'yellow'], 'blue']]]
+t = [[[['black', 'cyan'], 'white', ['green', 'red']], [['magenta', 'yellow'], 'blue']]]
 
 
 # The pprint module offers more sophisticated control over printing both
