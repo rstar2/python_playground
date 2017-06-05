@@ -16,3 +16,4 @@ for i in range(3):                      # show the first 3 file headers
     print(filename, hex(crc32), comp_size, uncomp_size)
 
     start += extra_size + comp_size     # skip to the next header
+    
