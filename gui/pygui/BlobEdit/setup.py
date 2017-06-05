@@ -1,8 +1,8 @@
 import sys
-print sys.path
+print(sys.path)
 
 from distutils.core import setup
-import py2app
+# import py2app
 
 setup(
     app=['blobedit.py'],
