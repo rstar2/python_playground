@@ -1,0 +1,8 @@
+
+# https://github.com/r0x0r/pywebview
+
+# Install the dependencies 
+$ pip install pythonnet
+
+# Install pywebview
+$ pip install pywebview
