@@ -9,8 +9,8 @@ handlers:
     formatter: simple
     stream: ext://sys.stdout
 loggers:
-  simpleExample:
-    level: DEBUG
+  simpleExampleYAML:
+    level: INFO
     handlers: [console]
     propagate: no
 root:
