@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['hello.py'],
-             pathex=['D:\\websites\\python'],
+             pathex=['D:\\websites\\python\\learn\\freeze'],
              binaries=[],
              datas=[],
              hiddenimports=[],
@@ -18,11 +18,16 @@ pyz = PYZ(a.pure, a.zipped_data,
              cipher=block_cipher)
 exe = EXE(pyz,
           a.scripts,
-          a.binaries,
-          a.zipfiles,
-          a.datas,
+          exclude_binaries=True,
           name='hello',
           debug=False,
           strip=False,
           upx=True,
           console=True )
+coll = COLLECT(exe,
+               a.binaries,
+               a.zipfiles,
+               a.datas,
+               strip=False,
+               upx=True,
+               name='hello')

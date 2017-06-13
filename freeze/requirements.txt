@@ -1,0 +1,3 @@
+
+# Install pyinstaller
+$ pip install pyinstaller
