@@ -1,0 +1,8 @@
+
+# Install BeautifulSoup
+$ pip install beautifulsoup4
+
+
+# Install Selenium
+$ pip install selenium
+
