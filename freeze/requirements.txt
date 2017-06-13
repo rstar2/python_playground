@@ -1,3 +1,9 @@
 
 # Install pyinstaller
 $ pip install pyinstaller
+
+# Then freeze: 
+# 1. in folder
+$ pyinstaller hello
+# 2. in single file
+$ pyinstaller hello -F
