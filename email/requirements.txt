@@ -1,0 +1,5 @@
+# For receiving - IMAP protocol is easier to use 'imapclient' and 'pyzmail' ('pyzmail36' - the patch for python3.6)
+# Install imapclient
+$ pip install imapclient pyzmail36
+
+# For sending - could use 'pyzmail also
