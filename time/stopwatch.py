@@ -3,14 +3,6 @@
 
 import time
 
-
-# the Unix epoch (12 AM on January 1, 1970 UTC) timestamp
-# time.time()
-
-#  make the thread sleep AND BLOCK for certain seconds
-# time.sleep(5)
-
-
 # Display the program's instructions.
 print('Press ENTER to begin. Afterwards, press ENTER to "click" the stopwatch. Press Ctrl-C to quit.')
 input()  # press Enter to begin
