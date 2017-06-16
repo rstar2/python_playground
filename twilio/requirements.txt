@@ -1,0 +1,22 @@
+# Twilio Account SID
+# ACbd4e2d982488770e53f7aad9c998681a
+
+# Twilio Auth Token
+# 4b4e4074817986e25aeec5f9eae6fe88
+
+# Twilio registered phone number (SMS capable)
+# +48799449209
+
+# Note - with Twilio Trial we can send SMS only to "verified" phone numbers
+# currentyl these are +359898776643 and +359898776653
+
+# Install twilio-python (https://github.com/twilio/twilio-python)
+$ pip install twilio
+
+
+# Test - simple curl command
+$ curl 'https://api.twilio.com/2010-04-01/Accounts/ACbd4e2d982488770e53f7aad9c998681a/Messages.json' -X POST \
+--data-urlencode 'To=+359898776653' \
+--data-urlencode 'From=+48799449209' \
+--data-urlencode 'Body=Az sum Rumen' \
+-u ACbd4e2d982488770e53f7aad9c998681a:4b4e4074817986e25aeec5f9eae6fe88
