@@ -1,16 +1,33 @@
 from setuptools import setup
 
+
 setup(
     name='ForecasterSimple',
     version='1.0',
+    license='MIT',
+    keywords='weather forecaster',
+    description='Weather Forecaster',
+    long_description='Simple Weather Forecaster module',
+    author='Rumen Neshev',
+    author_email='neshev.rumen@abv.bg',
     py_modules=['forecaster_simple'],
-    install_requires=[
-        'click>=6.6,<=6.7'
+    # install_requires=[
+    #     'click>=6.6,<=6.7'
+    # ],
+    # extras_require={
+    #     'dev': ['check-manifest'],
+    #     'test': ['coverage'],
+    # },
+    classifiers=[
+        'Development Status :: 3 - Alpha',
+        'License :: OSI Approved :: MIT License',
+        'Programming Language :: Python :: 3',
     ],
-    entry_points='''
-        [console_scripts]
-        forecaster_simple=forecaster_simple:main
-    ''',
+    entry_points={
+        'console_scripts': [
+            'forecaster_simple=forecaster_simple:main',
+        ],
+    },
 )
 
 # https://www.youtube.com/watch?v=4fzAMdLKC5k
