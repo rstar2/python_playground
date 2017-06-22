@@ -1,0 +1,3 @@
+# the local ForecasterSimple package should be install (it installs just the "forecaster_simple" module)
+
+# the local Forecaster package should be install (it installs "forecaster" module)
