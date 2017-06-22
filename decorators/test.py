@@ -104,7 +104,7 @@ class MyClass(object):
 
 
 # --------------
-#  some built-in decorators
+#  some built-in decorators - @classmethod, @staticmethod, @wraps
 
 class A(object):
     @classmethod
@@ -118,3 +118,14 @@ class A(object):
 
 A.foo()
 A.bar()
+
+from functools import wraps
+
+def memoize(f):
+    cache = {}
+    # this will fix the new function (decorated) name and etc,
+    # if some other decorator for instance uses it
+    @wraps
+    def decorated(*args, **kwargs):
+        return f(*args, **kwargs)
+    return decorated
