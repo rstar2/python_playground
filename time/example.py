@@ -18,8 +18,8 @@ halloween2015 = datetime.datetime(2015, 10, 31, 0, 0, 0)
 oct31_2015 = datetime.datetime(2015, 10, 31, 0, 0, 0)
 newyears2016 = datetime.datetime(2016, 1, 1, 0, 0, 0)
 
-halloween2015 == oct31_2015 # True
-halloween2015 > newyears2016 # False
+halloween2015 == oct31_2015  # True
+halloween2015 > newyears2016  # False
 
 now = datetime.datetime.now()
 print(now.year, now.month, now.day)
@@ -45,7 +45,7 @@ later = now + thousandDays
 
 # formatting: date -> string
 oct21st = datetime.datetime(2015, 10, 21, 16, 29, 0)
-print(oct21st.strftime('%Y/%m/%d %H:%M:%S')) # '2015/10/21 16:29:00'
+print(oct21st.strftime('%Y/%m/%d %H:%M:%S'))  # '2015/10/21 16:29:00'
 print(oct21st.strftime('%I:%M %p'))          # '04:29 PM'
 print(oct21st.strftime("%B of '%y"))         # "October of '15"
 

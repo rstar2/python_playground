@@ -16,6 +16,7 @@ setup(
     long_description=long_description,
     author='Rumen Neshev',
     author_email='neshev.rumen@abv.bg',
+    url='http://xxx.xxx.xxx',
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
     # If there are data files included in your packages that need to be
     # installed, specify them here.
@@ -38,6 +39,7 @@ setup(
         'dev': ['check-manifest'],
         'test': ['coverage'],
     },
+
     classifiers=[
         # How mature is this project? Common values are
         #   3 - Alpha
