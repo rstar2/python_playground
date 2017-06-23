@@ -15,7 +15,7 @@ print(w)
 
 l = [1, 2, 3, 4, 5]
 print(len(l))
-list.remove(3)
+l.remove(3)
 print(len(l))
 
 
