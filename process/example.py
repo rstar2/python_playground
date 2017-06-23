@@ -1,5 +1,4 @@
 import subprocess
-import time
 
 proc = subprocess.Popen('C:\\Windows\\System32\\calc.exe')
 
