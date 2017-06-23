@@ -1,5 +1,5 @@
-from setuptools import setup, find_packages
 from os import path
+from setuptools import setup, find_packages
 
 here = path.abspath(path.dirname(__file__))
 
@@ -16,12 +16,16 @@ setup(
     long_description=long_description,
     author='Rumen Neshev',
     author_email='neshev.rumen@abv.bg',
-    py_packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
+    packages=find_packages(exclude=['contrib', 'docs', 'tests']),
     # If there are data files included in your packages that need to be
-    # installed, specify them here.  If using Python 2.6 or less, then these
-    # have to be included in MANIFEST.in as well.
+    # installed, specify them here.
+    # The value must be a mapping from package name to a list of relative path names
+    # that should be copied into the package.
+    # The paths are interpreted as relative to the directory containing the package.
     package_data={
-        'sample': ['package_data.dat'],
+        # If any package contains *.txt or *.rst files, include them:
+        '': ['*.txt', '*.rst'],
+        'forecaster': ['package_data.dat'],
     },
     install_requires=[
         'click>=6.6,<=6.7'
