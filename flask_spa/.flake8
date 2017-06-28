@@ -1,0 +1,6 @@
+# INI file format, so the [flake8] is needed
+# actually this configuration can be in any of the '.flake8', 'setup.cfg' or 'tox.ini' files
+[flake8]
+ignore = E302, E303, E305, E501
+exclude = .tox,*.egg,build,data
+select = E,W,F
