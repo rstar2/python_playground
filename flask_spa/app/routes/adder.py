@@ -9,7 +9,7 @@ from . import routes
 # http://flask.pocoo.org/docs/0.10/quickstart/#routing
 @routes.route('/adder', methods=['GET', 'POST'])
 @routes.route('/adder/<int:init_value>', methods=['GET', 'POST'])
-def adderSSS(init_value=0):
+def adder(init_value=0):
     val = init_value
 
     # check if this is AJAX (POST) case

@@ -9,6 +9,6 @@ routes = Blueprint('routes', __name__, url_prefix="/routes")
 # using __all__  - it is taken to be the list of module names
 # that should be imported when from package import * is encountered
 # BUT then this "routes" module should not be imported  with
-# from routes import *
+# from routes import *, outside
 __all__ = ["adder", "github"]
 from . import *
