@@ -31,5 +31,5 @@ if __name__ == '__main__':
 
     # in order to debug in VSC it has to be started without debug=True
     # app.run(debug=True)
-
     app.run()
+
