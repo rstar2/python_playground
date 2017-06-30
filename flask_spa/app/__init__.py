@@ -28,5 +28,8 @@ if __name__ == '__main__':
     # debug=True - this also allows auto reloading if the app.py is changed
     db = create_db()
     app = create_app()
-    app.run(debug=True)
 
+    # in order to debug in VSC it has to be started without debug=True
+    # app.run(debug=True)
+
+    app.run()
