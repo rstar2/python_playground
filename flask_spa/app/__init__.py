@@ -22,8 +22,7 @@ def create_app_routes(app):
     from routes import routes
     app.register_blueprint(routes)
 
-
-    # run the server
+# run the server
 if __name__ == '__main__':
     # debug=True - this also allows auto reloading if the app.py is changed
     db = create_db()
@@ -32,4 +31,3 @@ if __name__ == '__main__':
     # in order to debug in VSC it has to be started without debug=True
     # app.run(debug=True)
     app.run()
-
