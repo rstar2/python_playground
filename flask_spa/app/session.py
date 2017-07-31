@@ -5,14 +5,9 @@ from utils import login_required
 def create_app_session(app):
 
     # By default Flask implements sessions using a cryptographically signed cookie
-    # and all user-session  data is serialized in the cookie
+    # and all user-session data is serialized in the cookie
 
-    # So choose a good secret-key
-    app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
-
-    # Good way to generate a secret key - Copy/Paste the generated string
-    # $ import os
-    # $ os.urandom(24)
+    app.secret_key = app.config['SECRET_KEY']
 
     @app.route('/protected')
     @login_required
