@@ -1,4 +1,6 @@
-from flask import session, request, redirect, url_for, escape
+from flask import session, flash, request, render_template, redirect, url_for, escape
+
+from utils import login_required
 
 def create_app_session(app):
 
@@ -13,25 +15,39 @@ def create_app_session(app):
     # $ os.urandom(24)
 
     @app.route('/protected')
+    @login_required
     def protected():
-        if 'username' in session:
-            return 'Logged in as %s' % escape(session['username'])
-        return 'You are not logged in'
+        return 'Logged in as %s' % escape(session['username'])
 
     @app.route('/login', methods=['GET', 'POST'])
     def login():
+        error = None
         if request.method == 'POST':
-            session['username'] = request.form['username']
-            return redirect(url_for('protected'))
-        return '''
-            <form action="" method="post">
-                <p><input type=text name=username>
-                <p><input type=submit value=Login>
-            </form>
-        '''
+            if request.form['username'] != 'admin':
+                error = 'Invalid username'
+            elif request.form['password'] != 'admin':
+                error = 'Invalid password'
+            else:
+                session['username'] = request.form['username']
+                session['logged_in'] = True  # or just a simple flag
+
+                flash('You were successfully logged in')
+
+                # The '_next' param is needed for the login_required decorator
+                _next = _next = request.form.get('_next', '')
+                if (_next is ''):
+                    _next = url_for('home')
+
+                return redirect(_next)
+
+        return render_template('login.html', error=error)
+
 
     @app.route('/logout')
     def logout():
         # remove the username from the session if it's there
         session.pop('username', None)
+        session.pop('logged_in', None)
+
+        flash('You were logged out')
         return redirect(url_for('home'))

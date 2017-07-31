@@ -19,6 +19,25 @@
 
 <body>
     <div class="container">
+        <div class=metanav>
+            {% if not session.logged_in %}
+                <a href="{{ url_for('login') }}">log in</a>
+            {% else %}
+                <a href="{{ url_for('logout') }}">log out</a>
+            {% endif %}
+        </div>
+
+        <!-- render flash messages if any -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class=flashes>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
         {% block body %} {% endblock %}
     </div>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>

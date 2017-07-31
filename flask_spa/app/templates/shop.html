@@ -4,7 +4,7 @@
 <div>
     Buy product {{product_id}}
 </div>
-<form action="/routes/shop/buy" method="post">
+<form action="{{url_for('routes.buy') }}" method="post">
     <article>
         <label>
             <span>Amount is $5.00</span>

@@ -1,17 +1,13 @@
 import os
-import time
-import requests
-import requests_cache
-
-from flask import render_template, request, jsonify
+from flask import render_template, request
 
 import stripe
 
 from . import routes
 
 stripe_keys = {
-    'secret_key': os.environ['SECRET_KEY'],
-    'publishable_key': os.environ['PUBLISHABLE_KEY']
+    'secret_key': "123123123",  # os.environ['SECRET_KEY'],
+    'publishable_key': "123123123123123"  # os.environ['PUBLISHABLE_KEY']
 }
 
 # initialize stripe
