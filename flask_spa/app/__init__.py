@@ -16,6 +16,10 @@ def create_app():
 def create_app_base(app):
     from app import create_app_base
     create_app_base(app)
+    
+    from session import create_app_session
+    create_app_session(app)
+
 
 def create_app_routes(app):
     # register the additional routes (Blueprints)

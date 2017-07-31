@@ -49,6 +49,4 @@ def create_app_base(app):
         resp = make_response(render_template('error400.html'), 400)
         resp.headers['X-Something'] = 'A value'
         return resp
-
-    from session import create_app_session
-    create_app_session(app)
+    

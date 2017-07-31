@@ -10,5 +10,5 @@ routes = Blueprint('routes', __name__, url_prefix="/routes")
 # that should be imported when from package import * is encountered
 # BUT then this "routes" module should not be imported  with
 # from routes import *, outside
-__all__ = ["adder", "github"]
+__all__ = ["adder", "github", "cookies", "shop"]
 from . import *

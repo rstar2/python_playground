@@ -1,0 +1,14 @@
+{% extends 'layouts/layout.html' %}
+
+
+{% block body %}
+    <h1>Shop using Stripes checkout.js</h1>
+    <br>
+    <div>
+        Buy product {{product_id}}
+    </div>
+    <form role="form" method="post">
+        <input type="hidden" name="product_id" value="{{product_id}}">
+    </form>
+    <br>
+{% endblock %}
