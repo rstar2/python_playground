@@ -1,14 +1,21 @@
-{% extends 'layouts/layout.html' %}
+{% extends 'layouts/layout.html' %} {% block body %}
+<h1>Shop using Stripe checkout.js</h1>
+<br>
+<div>
+    Buy product {{product_id}}
+</div>
+<form action="/routes/shop/buy" method="post">
+    <article>
+        <label>
+            <span>Amount is $5.00</span>
+        </label>
+    </article>
 
-
-{% block body %}
-    <h1>Shop using Stripes checkout.js</h1>
-    <br>
-    <div>
-        Buy product {{product_id}}
-    </div>
-    <form role="form" method="post">
-        <input type="hidden" name="product_id" value="{{product_id}}">
-    </form>
-    <br>
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="{{ key }}"
+            data-description="A Flask Charge"
+            data-amount="500"
+            data-locale="auto">
+    </script>
+</form>
 {% endblock %}
