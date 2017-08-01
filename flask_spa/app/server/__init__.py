@@ -20,6 +20,9 @@ app.config.from_object(default_config)
 # allow passing of real production configurations to modify/overwrite the default one
 app.config.from_envvar('APP_SETTINGS', silent=True)
 
+from flask_debugtoolbar import DebugToolbarExtension
+DebugToolbarExtension(app)
+
 
 # Define the database object which is imported
 # by modules and controllers
