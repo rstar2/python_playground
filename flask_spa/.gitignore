@@ -1,4 +1,6 @@
-/env
+env/*
+!env/.gitkeep
+
 **/__pycache__
 
-/github_cache.sqlite
+github_cache.sqlite
