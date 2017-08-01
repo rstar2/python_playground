@@ -1,6 +1,4 @@
 /env
-/.env
-
-.pyc
+**/__pycache__
 
 /github_cache.sqlite
