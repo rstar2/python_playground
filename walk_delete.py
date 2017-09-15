@@ -1,5 +1,8 @@
 #! /usr/bin/env python3
 import os
+import shutil
+
+
 
 
 def walkFolder(folder_root, name_delete):
@@ -14,7 +17,7 @@ def walkFolder(folder_root, name_delete):
             os.remove(to_delete)
             deleted = True
         elif os.path.isdir(to_delete):
-            os.removedirs(to_delete)
+            shutil.rmtree(to_delete)
             deleted = True
 
         if deleted:
