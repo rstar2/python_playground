@@ -24,9 +24,10 @@ foo()
 
 
 # -------------------
-# Using Classes - create a class that is Callabale , e.g. hash "call" attribute (__call__)
+# Using Classes - create a class that is Callabale,
+# e.g. hash "call" attribute (__call__)
 
-class entry_exit_ex(object):
+class entry_exit_ex:
 
     def __init__(self, f):
         self.f = f
@@ -92,7 +93,7 @@ def authorized(f):
 
 
 @authorized
-class MyClass(object):
+class MyClass:
     def f_1(self):
         pass
 
@@ -106,7 +107,7 @@ class MyClass(object):
 # --------------
 #  some built-in decorators - @classmethod, @staticmethod, @wraps
 
-class A(object):
+class A:
     @classmethod
     def foo(cls):
         print(cls.__name__)
@@ -120,6 +121,7 @@ A.foo()
 A.bar()
 
 from functools import wraps
+
 
 def memoize(f):
     cache = {}
