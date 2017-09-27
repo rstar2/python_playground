@@ -47,3 +47,6 @@ class DateTwo:
         d.month = t.tm_mon
         d.day = t.tm_mday
         return d
+
+
+date_today = Date.today()
