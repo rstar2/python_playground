@@ -7,7 +7,8 @@ from . import routes
 
 stripe_keys = {
     'secret_key': "123123123",  # os.environ['SECRET_KEY'],
-    'publishable_key': "123123123123123"  # os.environ['PUBLISHABLE_KEY']
+    # 'publishable_key': "123123123123123"  # os.environ['PUBLISHABLE_KEY']
+    'publishable_key': ""
 }
 
 # initialize stripe
@@ -16,7 +17,15 @@ stripe.api_key = stripe_keys['secret_key']
 
 @routes.route('/shop/<int:product_id>', methods=['GET'])
 def shop(product_id):
-    return render_template('shop.html', product_id=product_id, stripe_key=stripe_keys['publishable_key'])
+    product_name = "Product ID"
+
+    # Amount in cents
+    product_price = 2342
+
+    return render_template('shop.html', product_id=product_id,
+                           product_name=product_name,
+                           product_price=product_price,
+                           stripe_key=stripe_keys['publishable_key'])
 
 
 @routes.route('/buy', methods=['POST'])
