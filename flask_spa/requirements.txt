@@ -16,5 +16,5 @@ pyflakes==1.5.0
 requests==2.18.1
 requests-cache==0.4.13
 stripe==1.62.0
-urllib3==1.21.1
+urllib3==1.26.5
 Werkzeug==0.12.2
